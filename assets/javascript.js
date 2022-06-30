@@ -12,24 +12,17 @@ const textFour = $('.four-pm');
 const textFive = $('.five-pm');
 const textSix = $('.six-pm');
 const button = $('.btn');
-console.log(convertDay(weekday))
+
+function timeText(timeKey, timeBlock) {
+var timeNine = localStorage.getItem(timeKey);
+if (timeNine) {
+    timeBlock.text(timeNine)
+}
+}
 
 function convertDay(weekday) {
-    if (weekday == 0) {
-        return "Sun";
-    } else if (weekday == 1) {
-        return "Mon"
-    }else if (weekday == 2) {
-        return "Tue"
-    }else if (weekday == 3) {
-        return "Wed"
-    }else if (weekday == 4) {
-        return "Thurs"
-    }else if (weekday == 5) {
-        return "Fri"
-    }else if (weekday == 6) {
-        return "Sat"
-    }
+    const weekArray = ["Sun","Mon", "Tue", "Weds", "Thurs", "Fri", "Sat"]
+   return weekArray[weekday];
 }
 
 function hourOf(hour, timeEL) {
@@ -40,32 +33,53 @@ function hourOf(hour, timeEL) {
     } else if (time > hour) {
         timeEL.addClass("past");
     }
-    console.log(hour)
 }
 
-function onClick() {
-    console.log("ssdgf")
-   const textForNine = textNine.val();
+function onClick(event) {
+   const dataTodo = event.target.dataset.section
+   if (dataTodo === "nine") {
+     const textForNine = textNine.val();
    localStorage.setItem("9:00", textForNine);
-   const textForTen = textTen.val();
+}
+    if (dataTodo === "ten"){
+     const textForTen = textTen.val();
    localStorage.setItem("10:00", textForTen);
-   const textForEleven = textEleven.val();
+}
+   if (dataTodo === "eleven") {
+    const textForEleven = textEleven.val();
    localStorage.setItem("11:00", textForEleven);
+} 
+    if (dataTodo === "twelve") {
    const textForTwelve = textTwelve.val();
    localStorage.setItem("12:00", textForTwelve);
+}
+    if (dataTodo === "one") {
    const textForOne = textOne.val();
    localStorage.setItem("1:00", textForOne);
+}
+    if (dataTodo === "two") {
    const textForTwo = textTwo.val();
    localStorage.setItem("2:00", textForTwo);
+}
+    if (dataTodo === "three") {
    const textForThree = textThree.val();
    localStorage.setItem("3:00", textForThree);
+}
+    if (dataTodo === "four") {
    const textForFour = textFour.val();
    localStorage.setItem("4:00", textForFour);
+}
+    if (dataTodo === "five") {
    const textForFive = textFive.val();
    localStorage.setItem("5:00", textForFive);
+}
+    if (dataTodo === "six") {
    const textForSix = textSix.val();
    localStorage.setItem("6:00", textForSix);
 }
+}
+
+
 
 
 button.on('click', onClick);
@@ -80,3 +94,14 @@ hourOf(15, textThree);
 hourOf(16, textFour);
 hourOf(17, textFive);
 hourOf(18, textSix);
+
+timeText("9:00", textNine);
+timeText("10:00", textTen);
+timeText("11:00", textEleven);
+timeText("12:00", textTwelve);
+timeText("1:00", textOne);
+timeText("2:00", textTwo);
+timeText("3:00", textThree);
+timeText("4:00", textFour);
+timeText("5:00", textFive);
+timeText("6:00", textSix);

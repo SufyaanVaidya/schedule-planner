@@ -1,3 +1,4 @@
+// these are my variables that target different things through out my html file
 const weekday = moment().weekday();
 const date = $('#currentDay');
 const time = moment().hour();
@@ -13,6 +14,7 @@ const textFive = $('.five-pm');
 const textSix = $('.six-pm');
 const button = $('.btn');
 
+// this function is returning the keys value from the local storage
 function timeText(timeKey, timeBlock) {
 var timeNine = localStorage.getItem(timeKey);
 if (timeNine) {
@@ -20,11 +22,13 @@ if (timeNine) {
 }
 }
 
+// this function is sellecting from the array of days and returning the current day
 function convertDay(weekday) {
     const weekArray = ["Sun","Mon", "Tue", "Weds", "Thurs", "Fri", "Sat"]
    return weekArray[weekday];
 }
 
+// this function is saying what color the timestamp area will display according to the current time
 function hourOf(hour, timeEL) {
     if (time == hour) {
         timeEL.addClass("present");
@@ -35,6 +39,9 @@ function hourOf(hour, timeEL) {
     }
 }
 
+// this function is stating that it needs to target the save button click when that button is clicked whatever string is read that is 
+// associated with the time block will save and appear everytime the page loads
+// each if st5atement will save that individual time block
 function onClick(event) {
    const dataTodo = event.target.dataset.section
    if (dataTodo === "nine") {
@@ -81,9 +88,13 @@ function onClick(event) {
 
 
 
-
+// this is adding an eventlistener to the button element for a click
 button.on('click', onClick);
+
+// this is making todays date display in the correct area on the page
 date.text(convertDay(weekday));
+
+// these are giving each timeblock their respected time and where to apply the function to
 hourOf(9, textNine);
 hourOf(10, textTen);
 hourOf(11, textEleven);
@@ -95,6 +106,7 @@ hourOf(16, textFour);
 hourOf(17, textFive);
 hourOf(18, textSix);
 
+// this is giving the text areas time values to read
 timeText("9:00", textNine);
 timeText("10:00", textTen);
 timeText("11:00", textEleven);

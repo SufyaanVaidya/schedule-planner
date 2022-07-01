@@ -5,33 +5,25 @@
 This page is a day planner that saves your todo list. It also displays which day of the week it is. The planner is only for normal business hours from 9AM-6PM. When the hour has passed the todo list item will change colors to grey, when its the current hour the todo item will display red, and for the time that hasnt come the todo items will appear green. You can input any text or todo item inside the time blocks and clicks save. Saving will save to the local storage and keep the todo items on the page even when refreshed till removed.
 
 
-[Deployable-Link](https://sufyaanvaidya.github.io/code-quiz/)
+[Deployable-Link](https://sufyaanvaidya.github.io/schedule-planner/)
 
 ## Installation
 
-1. i created a repository to store and add my created files.
-2. After the repo was created i created the base files and pushed them to the repo.
-3. When the base files were added i begain to code my html and css docs and javascript.
-4. To start i made sure that in the html i linked all my files and added all my tags that i will target via css or js
-5. Each tag got a class or id that can me called on.
-6. Once those were added i began to style the page.
-7. I added the an image to the header, i made it fit the page, and changed the font and color for every element inside the body tag.
-8. Next i put everything inside of my main tag in a flex box so can justify and align it to the center of the page and gave it a box and shadow.
-9. After the box was created i styled buttons and the question screens/cards.
-10. When everything is styled i began working on the js by creating consts that target different id's with querySelector.
+1. I created a repository to store and add my starter files.
+2. After the starter files were added i added the time blocks.
+3. To style the html i used the bootstrap that was already linked to the html.
+4. With all the html already styled i added a new jascript file.
+5. On that js file i used jquery to target the classes on html and made them equal to a const, and conts with moment.js to get the current day and current time.
+6. Now i created a function that displays the day at the top and changes to the current day.
+7. Now i created the function that will change the colors of the block based of the current time and the block time.
+8. Then i created a function that targets each time block and adds the user input into the local storage with their own keys and keeps them on the page.
+9. Next i created an even listener to all the buttons with jquery and calling on a function for the onclick.
+10. Now i made the date display in the correct position on the page with the targetted area .text and the function for the day.
 11. I targetted those consts and added event listeners that activate a function on a click of the const
-12. After this i created global variables to target throughout my js
-13. Now i will begin creating the functions so i started with hiding the cards.
-14. Next i added a function to not display the results untill called.
-15. Now i create the functions that make the page work which are: to start the quiz on click, display the question, store the score/save the score you got at the end, to update the highscores at the very end, the speed in which the page will count down, display the time in the chosen area, checking if the answer is right or wrong and if wrong remove some time and to cycle through questions array, to end the quiz/ stop showing certain screens/cards, to occupy/fill the leaderboard with user input, to update the leaderboard changing the input into a string, will sort the score best to worse, will allow you to go to the beginning of the quiz when the button is clicked, will clear the highscores list when the clear button is clicked, and this final function will allow you to view the highscores list at anytime during the quiz so long as there are names listed.
+12. Next i called on the function thats comparing the times and gave the parameters the value for the timeblocks time and the area it needed to appear in.
+13. finally i called on the function that saves the user input from the local storage to the page and keeps it onto the page.
 
 ## Usage 
-- To begin/take the assignment click the begin button and answer all the questions.
-
-- When finished you will be asked to publish your score on the leaderboard
-
-- When your name is published you will be taken to the leaderboard and have the option to clear the leaderboard or go back to the start of the quiz.
-
 
 ![](./assets/images/Untitled_%20Jun%2028%2C%202022%205_12%20PM.gif)
 

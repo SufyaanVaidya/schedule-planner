@@ -25,11 +25,11 @@ This page is a day planner that saves your todo list. It also displays which day
 
 ## Usage 
 
-![](./assets/images/Untitled_%20Jun%2028%2C%202022%205_12%20PM.gif)
+![](./assets/images/Untitled_%20Jul%201%2C%202022%2012_18%20AM.gif)
 
-![](./assets/images/code-2.PNG)
+![](./assets/images/code1.PNG)
 
-![](./assets/images/code-1.PNG)
+![](./assets/images/code2.PNG)
 
 
 
@@ -38,8 +38,8 @@ This page is a day planner that saves your todo list. It also displays which day
 
 - Sufyaan Vaidya (https://github.com/SufyaanVaidya)
 - (https://stackoverflow.com/)
-- (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- (https://www.w3schools.com/js/default.asp)
+- (https://api.jquery.com/)
+- (https://momentjs.com/docs/#/get-set/)
 
 
 
@@ -49,7 +49,9 @@ This page is a day planner that saves your todo list. It also displays which day
 - HTML
 - CSS
 - Javascript
+- jquery
+- Bootstrap
 
 ## License
 
-- [This-website-has-an-MIT-license](https://github.com/SufyaanVaidya/code-quiz/blob/main/LICENSE)
+- [This-website-has-an-MIT-license](https://github.com/SufyaanVaidya/schedule-planner/blob/ae55012c2dc10bcc2c58b98efe2a5f18832208ab/LICENSE)
